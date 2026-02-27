@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ProductCategory, Product } from '../../interfaces/products.interface';
 import { BadgeType } from '../../../shared/interfaces/badge.interface';
+import { Product, ProductCategory } from '../../interfaces/products.interface';
 
 /**
  * Componente de tabla de productos.

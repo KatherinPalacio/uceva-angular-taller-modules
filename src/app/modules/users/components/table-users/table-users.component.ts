@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BadgeType } from '../../../shared/interfaces/badge.interface';
-import { UserEngineering, User } from '../../interfaces/users.interface';
+import { User, UserEngineering } from '../../interfaces/users.interface';
 
 /**
  * Componente de tabla de usuarios.
