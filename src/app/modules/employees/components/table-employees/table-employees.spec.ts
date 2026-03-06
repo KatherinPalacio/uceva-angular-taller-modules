@@ -1,23 +1,20 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { Employee } from '../../interfaces/employee.interface';
+import { EmployeesService } from '../../services/employees';
 
-import { TableEmployees } from './table-employees';
+@Component({
+  selector: 'app-table-employees',
+  templateUrl: './table-employees.html',
+  styleUrls: ['./table-employees.scss']
+})
+export class TableEmployees implements OnInit {
 
-describe('TableEmployees', () => {
-  let component: TableEmployees;
-  let fixture: ComponentFixture<TableEmployees>;
+  employees: Employee[] = [];
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [TableEmployees]
-    })
-    .compileComponents();
+  constructor(private employeesService: EmployeesService) {}
 
-    fixture = TestBed.createComponent(TableEmployees);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  ngOnInit(): void {
+    this.employees = this.employeesService.getEmployees();
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+}

@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Employee } from '../../interfaces/employee.interface';
+import { EmployeesService } from '../../services/employees';
 
 @Component({
   selector: 'app-table-employees',
   standalone: false,
   templateUrl: './table-employees.html',
-  styleUrl: './table-employees.scss',
+  styleUrls: ['./table-employees.scss'],
 })
-export class TableEmployees {
+export class TableEmployees implements OnInit {
+
+  employees: Employee[] = [];
+
+  constructor(private employeesService: EmployeesService) {}
+
+  ngOnInit(): void {
+    this.employees = this.employeesService.getEmployees();
+  }
 
 }
