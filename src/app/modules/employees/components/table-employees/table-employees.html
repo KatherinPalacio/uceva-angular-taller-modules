@@ -1,21 +1,30 @@
-<h2>Employees</h2>
+<table class="table table-striped border">
 
-<table>
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Department</th>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Department</th>
     </tr>
   </thead>
 
   <tbody>
+
     <tr *ngFor="let employee of employees">
-      <td>{{ employee.id }}</td>
+
+      <th scope="row">{{ employee.id }}</th>
       <td>{{ employee.name }}</td>
       <td>{{ employee.position }}</td>
-      <td>{{ employee.department }}</td>
+
+      <td>
+        <span class="badge bg-primary">
+          {{ employee.department }}
+        </span>
+      </td>
+
     </tr>
+
   </tbody>
+
 </table>
