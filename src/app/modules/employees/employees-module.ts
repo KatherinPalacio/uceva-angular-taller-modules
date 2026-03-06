@@ -5,7 +5,6 @@ import { EmployeesRoutingModule } from './employees-routing-module';
 import { TableEmployees } from './components/table-employees/table-employees';
 import { EmployeesPage } from './pages/employees-page/employees-page';
 
-
 @NgModule({
   declarations: [
     TableEmployees,
