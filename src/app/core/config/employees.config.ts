@@ -1,5 +1,9 @@
 import { Employee } from '../../modules/employees/interfaces/employee.interface';
 
+/**
+ * Mock employees data used by the EmployeesService
+ */
+
 export const EMPLOYEES_DATA: Employee[] = [
   {
     id: 1,
